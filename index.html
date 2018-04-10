@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>SW Film Finder</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <meta name="description" content="In what films is your favorite character?">
+    <link href="index.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  </head>
+  <body>
+    <header role="banner">
+      <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Star_Wars_Logo.svg" alt="sw logo">
+      <h1>Film Finder</h1>
+    </header>
+    <main>
+      <h1>Enter SW character name:</h1>
+        <form action="#" class="js-search-form">
+          <label for="query"></label>
+          <input type="text" class="js-query">
+          <button type="submit">Find Films!</button>
+        </form>
+        <h2>Films:</h2>
+        <div class="js-search-results" aria-live="assertive" hidden></div>
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>
