@@ -1,8 +1,21 @@
 body {
   padding-top: 10px;
   font-family: 'Roboto', sans-serif;
+  background: url(background.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  color: #ffffff;
 }
-.logo {
-  padding-left: 10px;
-  width: 256px;
+.ff-header {
+  margin-bottom: 20px;
+}
+.js-search-form {
+  margin-bottom: 40px;
+}
+.js-search-results {
+  margin-bottom: 40px;
+}
+.card {
+  margin-bottom: 1.25rem;
+  color: #000000;
 }

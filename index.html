@@ -6,23 +6,44 @@
     <title>SW Film Finder</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <meta name="description" content="In what films is your favorite character?">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+    <!-- Custom CSS -->
     <link href="index.css" rel="stylesheet" type="text/css" />
+
+    <!-- Custom Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
   </head>
   <body>
-    <header role="banner">
-      <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Star_Wars_Logo.svg" alt="sw logo">
-      <h1>Film Finder</h1>
-    </header>
     <main>
-      <h1>Enter SW character name:</h1>
-        <form action="#" class="js-search-form">
-          <label for="query"></label>
-          <input type="text" class="js-query">
-          <button type="submit">Find Films!</button>
-        </form>
-        <h2>Films:</h2>
-        <div class="js-search-results" aria-live="assertive" hidden></div>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="ff-header">
+            <h3>STAR WARS Film Finder</h3>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <h3>Enter character name:</h3>
+        </div>
+        <div class="row justify-content-center">
+          <form action="#" class="js-search-form">
+            <label for="query"></label>
+            <input type="text" class="js-query">
+            <button type="submit">Find Films!</button>
+          </form>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="js-search-results" aria-live="assertive" hidden></div>
+          </div>
+          <div class="col-md-6">
+            <div class="js-yt-search-results" aria-live="assertive" hidden></div>
+          </div>
+        </div>
+      </div> <!-- /container -->
     </main>
     <script src="index.js"></script>
   </body>
