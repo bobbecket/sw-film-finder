@@ -18,6 +18,7 @@ function getDataFromYTApi(searchTerm, callback) {
   const query = {
     part: 'snippet',
     q: `${searchTerm}`,
+    maxResults: 4,
     key: 'AIzaSyChe4eEkLQFrhADTPumU0g6BKdgOmsjpIo'
   }
   $.getJSON(YOUTUBE_SEARCH_URL, query, callback);
@@ -90,6 +91,19 @@ function displayFilmData(data)
 {
   if (data.results.length == 0)
   {
+    const alertTpl = `<div class="alert alert-danger alert-dismissible fade show">
+      @message
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>`;
+
+    const alertHTML = alertTpl.replace('@message', `Character not found`);
+
+    $('.js-alerts-container').html(alertHTML);
+
+    return;
+
     charName = "";
     filmHTML =
     `<div class="card bg-light mb-3">

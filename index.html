@@ -20,25 +20,36 @@
   <body>
     <main>
       <div class="container">
-        <div class="row justify-content-center">
-          <div class="ff-header">
-            <h3>STAR WARS Film Finder</h3>
+        <div class="row">
+          <div class="col-12">
+            <div class="ff-header text-center">
+              <h3>STAR WARS Film Finder</h3>
+            </div>
           </div>
         </div>
-        <div class="row justify-content-center">
-          <h3>Enter character name:</h3>
+        <div class="row">
+          <div class="col-12">
+            <h3 class="text-center">Enter character name:</h3>
+          </div>
         </div>
-        <div class="row justify-content-center">
-          <!-- <form action="#" class="js-search-form">
-            <label for="query"></label>
-            <input type="text" class="js-query">
-            <button type="submit" class="btn btn-primary">Find Films</button>
-          </form> -->
-          <form action="#" class="form-inline js-search-form">
-            <label class="sr-only" for="inlineFormInputName">Name</label>
-            <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName" placeholder="Luke Skywalker">          
-            <button type="submit" class="btn btn-primary mb-2">Submit</button>
-          </form>
+        <div class="row">
+          <div class="col-md-6 offset-md-3">
+            <form action="#" class="js-search-form">
+              <div class="form-row">
+                <div class="col-9">
+                  <label class="sr-only" for="inlineFormInputName">Name</label>
+                  <input type="text" class="form-control" id="inlineFormInputName" placeholder="Luke Skywalker">
+                </div><!-- /.col-9 -->
+                <div class="col-3">
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+              </div><!-- /.form-row -->
+            </form>
+            <div class="js-alerts-container">
+              <!-- Initially, there will be no alerts -->
+            </div>
+          </div>
+
         </div>
         <div class="row">
           <div class="col-md-6">
@@ -52,6 +63,9 @@
         </div>
       </div> <!-- /container -->
     </main>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
     <script src="index.js"></script>
   </body>
 </html>
