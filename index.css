@@ -19,3 +19,11 @@ body {
   margin-bottom: 1.25rem;
   color: #000000;
 }
+.card-text {
+  max-height: 48px;
+  overflow: hidden;
+}
+.card-title {
+  max-height: 48px;
+  overflow: hidden;
+}

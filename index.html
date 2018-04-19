@@ -29,10 +29,15 @@
           <h3>Enter character name:</h3>
         </div>
         <div class="row justify-content-center">
-          <form action="#" class="js-search-form">
+          <!-- <form action="#" class="js-search-form">
             <label for="query"></label>
             <input type="text" class="js-query">
-            <button type="submit">Find Films!</button>
+            <button type="submit" class="btn btn-primary">Find Films</button>
+          </form> -->
+          <form action="#" class="form-inline js-search-form">
+            <label class="sr-only" for="inlineFormInputName">Name</label>
+            <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName" placeholder="Luke Skywalker">          
+            <button type="submit" class="btn btn-primary mb-2">Submit</button>
           </form>
         </div>
         <div class="row">
@@ -40,7 +45,9 @@
             <div class="js-search-results" aria-live="assertive" hidden></div>
           </div>
           <div class="col-md-6">
-            <div class="js-yt-search-results" aria-live="assertive" hidden></div>
+            <div class="container">
+              <div class="js-yt-search-results" aria-live="assertive" hidden></div>
+            </div>
           </div>
         </div>
       </div> <!-- /container -->
