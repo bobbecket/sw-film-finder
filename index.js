@@ -91,7 +91,7 @@ function displayFilmData(data)
 {
   if (data.results.length == 0)
   {
-    const alertTpl = `<div class="alert alert-danger alert-dismissible fade show">
+    const alertTpl = `<div class="alert alert-danger alert-dismissible fade show" role="alert">
       @message
       <button type="button" class="close" data-dismiss="alert" aria-label="Close">
         <span aria-hidden="true">&times;</span>
@@ -100,24 +100,13 @@ function displayFilmData(data)
 
     const alertHTML = alertTpl.replace('@message', `Character not found`);
 
-    $('.js-alerts-container').html(alertHTML);
-
-    return;
-
-    charName = "";
-    filmHTML =
-    `<div class="card bg-light mb-3">
-      <div class="card-header">
-        <strong style="color:red">Character not found!</strong>
-      </div>
-    </div>
-    `;
-
-    $('.js-search-results').prop('hidden', false).html(filmHTML);
-    $('.js-yt-search-results').prop('hidden', false).html("");
+    $('.js-alerts-container').prop('hidden', false).html(alertHTML);
   }
   else
   {
+    // Hide the alert
+    $('.js-alerts-container').prop('hidden', true).html("");
+
     charName = data.results[0].name;
     filmHTML =
     `<div class="card bg-light mb-3">
@@ -147,6 +136,9 @@ function watchSubmit() {
     filmHTML = "";
     charName = "";
     ytVidCount = 0;
+
+    // close the alert (if already open)
+    $('.js-alerts-container').alert('close');
 
     // clear out the input
     queryTarget.removeAttr('placeholder');
