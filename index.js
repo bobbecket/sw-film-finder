@@ -14,13 +14,16 @@ let ytVidCount = 0;
 
 const YOUTUBE_SEARCH_URL = 'https://www.googleapis.com/youtube/v3/search';
 
-function getDataFromYTApi(searchTerm, callback) {
-  const query = {
+function getDataFromYTApi(searchTerm, callback)
+{
+  const query =
+  {
     part: 'snippet',
     q: `${searchTerm}`,
     maxResults: 4,
     key: 'AIzaSyChe4eEkLQFrhADTPumU0g6BKdgOmsjpIo'
   }
+
   $.getJSON(YOUTUBE_SEARCH_URL, query, callback);
 }
 
@@ -67,12 +70,14 @@ function generateYouTubeHTML(result)
   }
 }
 
-function displayYouTubeSearchData(data) {
+function displayYouTubeSearchData(data)
+{
   let youTubeHTML = data.items.map((item, index) => generateYouTubeHTML(item)).join('');
   $('.js-yt-search-results').prop('hidden', false).html(youTubeHTML);
 }
 
-function getDataFromApi(searchTerm, callback) {
+function getDataFromApi(searchTerm, callback)
+{
   const searchURL = SWAPI_PEOPLE_SEARCH_BASE_URL + searchTerm;
   const query = "";
   $.getJSON(searchURL, query, callback);
@@ -91,6 +96,7 @@ function displayFilmData(data)
 {
   if (data.results.length == 0)
   {
+    // Character not found -- display dismissible alert
     const alertTpl = `<div class="alert alert-danger alert-dismissible fade show" role="alert">
       @message
       <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -107,6 +113,7 @@ function displayFilmData(data)
     // Hide the alert
     $('.js-alerts-container').prop('hidden', true).html("");
 
+    // Display the film data for this character
     charName = data.results[0].name;
     filmHTML =
     `<div class="card bg-light mb-3">
@@ -126,8 +133,10 @@ function displayFilmData(data)
   }
 }
 
-function watchSubmit() {
-  $('.js-search-form').submit(event => {
+function watchSubmit()
+{
+  $('.js-search-form').submit(event =>
+  {
     event.preventDefault();
     const queryTarget = $(event.currentTarget).find('#inlineFormInputName');
     const query = queryTarget.val();
