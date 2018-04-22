@@ -1,7 +1,7 @@
 Download
 --------
 
-[SW Film Finder][dl] (89 KB) -- 21 Apr 2018
+[SW Film Finder][dl] (89 KB) -- 21 Apr 2018 by Bob Becket
 
 [dl]: https://github.com/bobbecket/sw-film-finder/archive/master.zip
 
@@ -28,3 +28,11 @@ a Star Wars character appears.
 It also displays up to 4 YouTube video thumbnails relating to the name
 of the character, which, when clicked launch the video within YouTube.
 
+Technologies used
+-----------------
+
+- HTML
+- CSS
+- JavaScript
+- JQuery
+- Bootstrap
