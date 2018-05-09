@@ -7,6 +7,19 @@ body {
   color: #ffffff;
   margin-bottom: 60px; /* Margin bottom by footer height */
 }
+button,
+button:active,
+button:focus,
+button:hover,
+.btn,
+.btn:active,
+.btn:focus,
+.btn:hover{
+    background-color: #FBB424;
+    color: #000000;
+    border: none !important;
+    outline: none !important;
+}
 .ff-header {
   margin-bottom: 20px;
 }

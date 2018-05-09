@@ -72,7 +72,12 @@ function generateYouTubeHTML(result)
 
 function displayYouTubeSearchData(data)
 {
-  let youTubeHTML = data.items.map((item, index) => generateYouTubeHTML(item)).join('');
+  let youTubeHTML = `<div class="row">
+  <h5 class="text-center">Related Videos</h5>
+  </div>`;
+
+  youTubeHTML += data.items.map((item, index) => generateYouTubeHTML(item)).join('');
+
   $('.js-yt-search-results').prop('hidden', false).html(youTubeHTML);
 }
 
@@ -129,7 +134,8 @@ function displayFilmData(data)
     $('.js-search-results').prop('hidden', false).html(filmHTML);
 
     // Get YouTube data and display it
-    getDataFromYTApi(charName, displayYouTubeSearchData);
+    const searchTerm = "star wars " + charName;
+    getDataFromYTApi(searchTerm, displayYouTubeSearchData);
   }
 }
 
